@@ -1,0 +1,2 @@
+# Ignore ngrok executable to avoid virus false positives
+ngrok.exe

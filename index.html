@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="3; url=https://discord.gg/w2yjBAWfhH" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph metadata for social media (like Discord, Facebook, etc.) -->
+    <meta property="og:title" content="Únete a Nyxis" />
+    <meta property="og:description" content="Nyxis es un servidor mágico y lleno de amistades para convivir con todos y divertirte!" />
+    <meta property="og:image" content="https://github.com/NyxisNet/discord-redirect/blob/main/embed-img.png?raw=true" />
+    <meta property="og:url" content="https://discord.gg/w2yjBAWfhH" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card metadata for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Únete a Nyxis" />
+    <meta name="twitter:description" content="Nyxis es un servidor mágico y lleno de amistades para convivir con todos y divertirte!" />
+    <meta name="twitter:image" content="https://github.com/NyxisNet/discord-redirect/blob/main/embed-img.png?raw=true" />
+    <meta name="twitter:url" content="https://discord.gg/w2yjBAWfhH" />
+
+    <!-- Title of the webpage shown in the browser tab -->
+    <title>Nyxis Discord</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 3em;
+        background: #2c2f33;
+        color: #fff;
+      }
+
+      .redirect-box {
+        background: #23272a;
+        padding: 2em;
+        border-radius: 12px;
+        display: inline-block;
+      }
+
+      a {
+        color: #7289da;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="redirect-box">
+      <h1>Redirigiendo al Discord de Nyxis...</h1>
+      <p>Si no se te redirige automáticamente en <span id="countdown-timer">3</span> segundos, 
+<a href="https://discord.gg/w2yjBAWfhH">clickea aquí para ir a nuestro Discord :)</a></p>
+
+    </div>
+
+    <script>
+      const x = document.getElementById("countdown-timer");
+      let seconds = Number(x.innerText);
+      const countdown = setInterval(() => {
+        console.log(seconds);
+        x.innerText = seconds;
+        if (seconds <= 0) {
+          clearInterval(countdown);
+          console.error("You could not be redirected for some reason :(");
+        }
+        seconds--;
+      }, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+# This title is shown before the `redirect-time` passes (only plain text supported)
+fallback-title: "Redirigiendo al Discord de Nyxis..."
+# This content is shown before the `redirect-time` passes (can be HTML)
+# Can use any of the configs after this one if you write it between {}
+fallback-content: |
+  <p>Si no se te redirige automáticamente en <span id="countdown-timer">{redirect-time}</span> segundos, 
+  <a href="{redirect-link}">clickea aquí para ir a nuestro Discord :)</a></p>
+
+# The title shown on the embedded meta when sharing the link
+common-title: "Únete a Nyxis"
+# The description shown on the embedded meta when sharing the link
+common-description: "Nyxis es un servidor mágico y lleno de amistades para convivir con todos y divertirte!"
+# Link to redirect to automatically on page's load
+redirect-link: "https://discord.gg/w2yjBAWfhH"
+# Link to redirect to when clicking on the embed of the shared link
+common-link: "https://discord.gg/w2yjBAWfhH"
+# Https URL to the image that will be shown when the link is shared
+common-image: "https://github.com/NyxisNet/discord-redirect/blob/main/embed-img.png?raw=true"
+# Title to show on the top of the browser (browser's tab)
+browser-title: "Nyxis Discord"
+# Relative path (or https URL) to the .ico image that will be shown on browser's tab
+browser-icon: "favicon.ico"
+# Time (in seconds) that the site will take to redirect the user.
+redirect-time: 3

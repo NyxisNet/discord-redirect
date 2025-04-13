@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="{redirect-time}; url={redirect-link}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{browser-icon}" type="image/x-icon" />
+
+    <!-- Open Graph metadata for social media (like Discord, Facebook, etc.) -->
+    <meta property="og:title" content="{common-title}" />
+    <meta property="og:description" content="{common-description}" />
+    <meta property="og:image" content="{common-image}" />
+    <meta property="og:url" content="{common-link}" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card metadata for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{common-title}" />
+    <meta name="twitter:description" content="{common-description}" />
+    <meta name="twitter:image" content="{common-image}" />
+    <meta name="twitter:url" content="{common-link}" />
+
+    <!-- Title of the webpage shown in the browser tab -->
+    <title>{browser-title}</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 3em;
+        background: #2c2f33;
+        color: #fff;
+      }
+
+      .redirect-box {
+        background: #23272a;
+        padding: 2em;
+        border-radius: 12px;
+        display: inline-block;
+      }
+
+      a {
+        color: #7289da;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="redirect-box">
+      <h1>{fallback-title}</h1>
+      {fallback-content}
+    </div>
+
+    <script>
+      const x = document.getElementById("countdown-timer");
+      let seconds = Number(x.innerText);
+      const countdown = setInterval(() => {
+        console.log(seconds);
+        x.innerText = seconds;
+        if (seconds <= 0) {
+          clearInterval(countdown);
+          console.error("You could not be redirected for some reason :(");
+        }
+        seconds--;
+      }, 1000);
+    </script>
+  </body>
+</html>
